@@ -61,6 +61,8 @@ public class NonnullPluginConfig
                         20),
                 new AnnotationMatcher("org.jspecify.annotations.Nullable", true,
                         20),
+                new AnnotationMatcher("org.jetbrains.annotations.Nullable", true,
+                        20),
                 // Nonnull-like annotations have the highest score for
                 // compatibility with the old generator
                 new AnnotationMatcher("jakarta.annotation.Nonnull", false, 30),
@@ -69,7 +71,9 @@ public class NonnullPluginConfig
                 new AnnotationMatcher("org.springframework.lang.NonNull", false,
                         30),
                 new AnnotationMatcher("org.jspecify.annotations.NonNull", false,
-                        30));
+                        30),
+                new AnnotationMatcher("org.jetbrains.annotations.NotNull", false,
+                        30));  
 
         public Processor(NonnullPluginConfig config) {
             super(config, defaults);
